@@ -270,4 +270,17 @@ const ExampleSheetWithStacking = ({ data }: any) => {
   );
 };
 
-export { ExampleSheetWithStacking };
+const ExampleSheetWithStackingControlled = ({ data }: any) => {
+  const [presented, setPresented] = useState(false);
+  return (<>
+      <button onClick={() => setPresented(true)}>Present (controlled)</button>
+      <SheetWithStackingStack>
+        <SheetWithStackingRoot presented={presented} onPresentedChange={setPresented}>
+          <ExampleSheetWithStackingView data={data} />
+        </SheetWithStackingRoot>
+      </SheetWithStackingStack>
+    </>
+  );
+};
+
+export { ExampleSheetWithStacking, ExampleSheetWithStackingControlled };

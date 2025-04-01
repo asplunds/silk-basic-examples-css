@@ -16,28 +16,14 @@ import { ExampleSheetWithStackingData } from "@/components/examples/SheetWithSta
 import { ExampleSheetWithStacking } from "@/components/examples/SheetWithStacking/ExampleSheetWithStacking";
 import { ExampleSidebar } from "@/components/examples/Sidebar/ExampleSidebar";
 import { ExampleCard } from "@/components/examples/Card/ExampleCard";
+import Example from "./example";
 
 export default function Home() {
   return (
     <React.StrictMode>
       <body className="Home-root">
         <main className="Home-main">
-          <ExampleBottomSheet />
-          <ExampleTopSheet />
-          <ExampleDetachedSheet />
-          <ExampleCard />
-          <ExampleSidebar />
-          <ExampleToast />
-          <ExampleSheetWithStacking data={ExampleSheetWithStackingData} />
-          <ExampleSheetWithDetent />
-          <ExampleSheetWithKeyboard />
-          <ExampleLongSheet />
-          <ExamplePage />
-          <ExamplePageFromBottom />
-
-          <div className="Home-topBar">
-            <div className="Home-topBarContent">Silk</div>
-          </div>
+          <Example />
         </main>
       </body>
     </React.StrictMode>
